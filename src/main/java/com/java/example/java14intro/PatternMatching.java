@@ -67,5 +67,6 @@ public class PatternMatching {
     private static boolean validateName(Object x, boolean ignoreCase) {
         return x instanceof String name || /*name.length() < 10 && */ ignoreCase;
     }
-
+    
+    // open task-what-variable-will-be-printed-if-true.txt
 }
