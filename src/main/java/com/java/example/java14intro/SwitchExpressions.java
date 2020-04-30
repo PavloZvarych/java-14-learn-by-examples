@@ -1,26 +1,19 @@
 package com.java.example.java14intro;
 
 /**
- * In jdk 14 enhanced switch statements and switch expressions were added as a standard language feature.
- * In jdk 12 and 13 it was a preview language feature.
- * This class designed to help a user to understand switch expressions and why they were needed.
  * Official documentation: https://openjdk.java.net/jeps/361
  */
 public class SwitchExpressions {
 
-    /**
-     * Main method to be used to call private methods of this class
-     * @param args - any additional arguments from console
-     */
     public static void main(String[] args) {
     }
 
     /**
      * What is the problem with the existing switch statements?
      * Problem #1: they are error-prone.
-     * A user might forget to add a break statement.
+     * A developer might forget to add a break statement.
      * This will lead to an unexpected result.
-     * @param cellularOperator - specify cellular operator name
+     * Try to call this method with "lynca mobile" input.
      */
     private static void printInternetPackageForCellularOperator(String cellularOperator) {
         switch (cellularOperator) {
@@ -45,7 +38,6 @@ public class SwitchExpressions {
      * Enhanced switch statements were introduced.
      * Only expressions on the right of -> will be executed.
      * This solved the problem #1 mentioned above.
-     * @param cellularOperator - cellular operator name
      */
     private static void printPriceOfBusinessSubscriptionForCellularOperator(String cellularOperator) {
         switch (cellularOperator) {
@@ -61,7 +53,6 @@ public class SwitchExpressions {
      * What is the problem with the existing switch statements?
      * Problem #2: variable defined inside one arm has a scope of an entire block.
      * Another arm/case cannot use the same variable name.
-     * @param animal - name of the animal
      */
     private static void printClassOfAnimal(String animal) {
         switch (animal) {
@@ -80,9 +71,8 @@ public class SwitchExpressions {
     }
 
     /**
-     * Enhanced switch statements solve problem #2 mentioned above.
+     * Enhanced switch statements solve the problem #2 mentioned above.
      * A variable inside one arm has a scope of this arm.
-     * @param animal - name of the animal
      */
     private static void checkRegistrationNumberForAnimal(String animal) {
         switch (animal) {
@@ -101,7 +91,6 @@ public class SwitchExpressions {
      * Switch expression example.
      * Default case is required if case do not use enum.
      * For enum example look at printNameAssociatedWithId(Numbers) method below.
-     * @param animal - domestic animal name
      */
     private static void printDomesticAnimalClass(String animal) {
         int animalClass = switch (animal) {
@@ -113,8 +102,7 @@ public class SwitchExpressions {
     }
 
     /**
-     * Switch expression example in System.out.println() function
-     * @param x - number name
+     * Switch expression can be passed and argument to methods
      */
     private static void printAssociatedNumber(String x) {
         System.out.println(switch (x) {
@@ -129,7 +117,6 @@ public class SwitchExpressions {
      * 'yield' is a restricted identifier and no class can be named that way.
      * Switch expression must either produce value or throw exception.
      * If you try to comment yield statement compiler will complain.
-     * @param x - argument to check in switch expression
      */
     private static void printAssociatedClassWithAnimal(String x) {
         int animalClass = switch (x) {
@@ -139,7 +126,7 @@ public class SwitchExpressions {
             }
             case "two" -> {
                 System.out.println("second arm");
-                yield 2;
+                throw new IllegalArgumentException("second arm used");
             }
             default -> 3;
         };
@@ -148,7 +135,6 @@ public class SwitchExpressions {
 
     /**
      * Switch expression can use a traditional representation with colon label ":".
-     * @param x - number representation name
      */
     private static void printAnimalClassificationName(String x) {
         int animalClass = switch (x) {
@@ -171,28 +157,25 @@ public class SwitchExpressions {
 
 
     /**
-     * Auxiliary enum to be used in printNameAssociatedWithId(Numbers) method
+     * Auxiliary enum to be used in printNameAssociatedWithId(Numbers) method below
      */
     private enum Numbers {
         ONE,
         TWO,
-        THREE,
-        FOUR
+        THREE
     }
 
     /**
-     * Default case is not required in case of enum.
+     * Default case is not required in case of enum (if we cover all cases).
      * If omitted it will be added by compiler.
      * It is not even recommended to add default case, in order to throw exception to indicate unexpected value.
      * Have a look at the compiled method.
-     * @param id - id of a user
      */
     private static void printNameAssociatedWithId(Numbers id) {
         String name = switch (id) {
             case ONE -> "Tomas";
             case TWO -> "John";
             case THREE -> "Peter";
-            default -> "The name";
         };
         System.out.println(name);
     }
