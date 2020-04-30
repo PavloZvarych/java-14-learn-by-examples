@@ -4,5 +4,5 @@ This project contains examples of:
 2) records;
 3) pattern matching.
 
-## How to learn?
+## How to use?
 Open java files and follow through examples.
