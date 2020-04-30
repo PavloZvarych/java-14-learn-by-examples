@@ -1,7 +1,5 @@
 /**
  * Auxiliary method to be used with printAnimalWithTypeInformation(String) method
- * @param x - input message.
- * @return input message with trailed " - referenced".
  */
 private static String yield(String x) {
     return x + " - referenced";
@@ -12,7 +10,6 @@ private static String yield(String x) {
  * - "class 1 " + animal
  *  OR
  * - "class 1 " + animal + " - referenced"
- * @param animal - animal name
  */
 private static void printAnimalWithTypeInformation(String animal) {
     String message = switch (animal) {
