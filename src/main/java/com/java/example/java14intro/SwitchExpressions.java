@@ -89,7 +89,7 @@ public class SwitchExpressions {
 
     /**
      * Switch expression example.
-     * Default case is required if case do not use enum.
+     * Default case is required if enum is not used in a case.
      * For enum example look at printNameAssociatedWithId(Numbers) method below.
      */
     private static void printDomesticAnimalClass(String animal) {
