@@ -1,5 +1,5 @@
 package com.java.example.java14intro;
- 
+
 /**
  * Text blocks were released in jdk 13, and improved in jdk 14 with new escape sequences
  * Official documentation: https://openjdk.java.net/jeps/368
@@ -131,7 +131,7 @@ public class TextBlocks {
             New escape line terminator can only be used with the text blocks.
             Check out the compiled code.
          */
-        String noLineTerminatorIntroducedInJdk14 = """
+        String newLineTerminatorIntroducedInJdk14 = """
                 Lorem ipsum dolor sit amet. \
                 consectetur adipiscing elit. In quam""";
 
