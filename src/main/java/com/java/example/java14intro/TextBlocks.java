@@ -17,7 +17,7 @@ public class TextBlocks {
 
         /*
             The text blocks improve code readability.
-            No escaping, new line or tabs characters appear in the string.
+            No escaping, newline, or tabs characters appear in the string.
             """ was chosen so that " character could appear unescaped inside text blocks.
         */
         String textBlocks =
@@ -28,11 +28,11 @@ public class TextBlocks {
                 """;
 
         /*
-            Code should be in a new line after opening fat delimiters (three double quote characters).
-            No new line character will be added after compilation.
+            The code should be in a new line after opening fat delimiters (three double-quote characters).
+            No newline character will be added after compilation.
             Check out the compiled class.
-            Closing """ can appear after last character.
-            If you do not want to have \n character at the end, add closing """ after your code.
+            The closing""" can appear after the last character.
+            If you do not want to have \n character at the end, add a closing """ after your code.
          */
         String textBlockHtml = """
                 <div class="second-row">""";
@@ -58,7 +58,7 @@ public class TextBlocks {
                 """;
 
         /*
-            Whitespace surrounding the content is  generally(*) removed during compilation.
+            Whitespace surrounding the content is generally(*) removed during compilation.
             Check out the compiled class.
             (*) - check out the next stringWithSpace string example.
          */
@@ -120,15 +120,15 @@ public class TextBlocks {
 
         /*
             Sometimes long lines are broken into smaller lines with "+",
-            but it still remains one line.
+            but it remains one line.
          */
         String longLiteral = "Lorem ipsum dolor sit amet. " +
                 "consectetur adipiscing elit. In quam";
 
         /*
-            In order to maintain one line strings in a text blocks,
+            To maintain one-line strings in text blocks,
             new escape line terminator ("\") has been added to java 14.
-            New escape line terminator can only be used with the text blocks.
+            A new escape line terminator can only be used with the text blocks.
             Check out the compiled code.
          */
         String newLineTerminatorIntroducedInJdk14 = """
@@ -143,7 +143,7 @@ public class TextBlocks {
                 """;
 
         /*
-            Single space escape sequence can be used in string literals as well.
+            Single space escape sequences can be used in string literals as well.
          */
         String singleSpaceEscapeSequenceInStringLiteral = "Lorem ipsum\sdolor";
 

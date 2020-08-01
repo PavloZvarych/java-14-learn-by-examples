@@ -67,7 +67,7 @@ final class RecordsExample {
 record RecordExample(String name, String shape) {}
 
 /**
- *  Record could have no components (arguments).
+ *  The record can be without components (arguments).
  */
 record Base() {}
 
@@ -81,7 +81,7 @@ record Bill(String address) {
 }
 
 /**
- *  Record can have static fields, static and instance methods.
+ *  A record can have static fields, static and instance methods.
  */
 record Restaurant () {
 
@@ -101,7 +101,7 @@ record Restaurant () {
 }
 
 /**
- * Records can have compact constructor with no parameters.
+ * Records can have a compact constructor with no parameters.
  * When we use a compact constructor we do not need to assign input parameters to private members.
  * Record's generated methods can be overridden (ctrl + o in Intellij).
  */
@@ -122,7 +122,7 @@ record Person(String firstName, String secondName) {
 }
 
 /**
- * We can also generate canonical constructor.
+ * We can also generate a canonical constructor.
  * Canonical constructor has all parameters.
  * Initialization of fields required.
  * alt + Insert for generation in Intellij.
@@ -136,8 +136,8 @@ record Animal(String x, String y) {
 }
 
 /**
- * Records have custom constructor, that is not required to have all parameters,
- * but has to call canonical constructor.
+ * Records have a custom constructor, that is not required to have all parameters,
+ * but has to call a canonical constructor.
  */
 record Administrator(String firstName, String secondName) {
 
@@ -188,11 +188,11 @@ class NewReflectionApi {
 }
 
 /**
- * Tuples is a collection of elements of different (not necessary the same) type.
- * Tuples are alternative to java records.
- * Java records has a few advantages over tuples:
+ * A tuple is a collection of elements of different (not necessarily the same) type
+ * Tuples are an alternative to java records.
+ * Java records have a few advantages over tuples:
  * - records have meaningful class and members names;
- * - class can support state validation in their constructor.
+ * - a class can support state validation in their constructor.
  */
 class RecordsAlternative {
     public static void main(String[] args) {

@@ -37,7 +37,7 @@ public class SwitchExpressions {
     /**
      * Enhanced switch statements were introduced.
      * Only expressions on the right of -> will be executed.
-     * This solved the problem #1 mentioned above.
+     * This solved problem #1 mentioned above.
      */
     private static void printPriceOfBusinessSubscriptionForCellularOperator(String cellularOperator) {
         switch (cellularOperator) {
@@ -71,7 +71,7 @@ public class SwitchExpressions {
     }
 
     /**
-     * Enhanced switch statements solve the problem #2 mentioned above.
+     * Enhanced switch statements solve problem #2 mentioned above.
      * A variable inside one arm has a scope of this arm.
      */
     private static void checkRegistrationNumberForAnimal(String animal) {
@@ -89,8 +89,8 @@ public class SwitchExpressions {
 
     /**
      * Switch expression example.
-     * Default case is required if enum is not used in a case.
-     * For enum example look at printNameAssociatedWithId(Numbers) method below.
+     * A default case is required if the enum is not used in a case.
+     * For enum, example look at printNameAssociatedWithId(Numbers) method below.
      */
     private static void printDomesticAnimalClass(String animal) {
         int animalClass = switch (animal) {
@@ -113,9 +113,9 @@ public class SwitchExpressions {
     }
 
     /**
-     * Jdk 14 introduced 'yield' statement to return value.
+     * Jdk 14 introduced the 'yield' statement to return value.
      * 'yield' is a restricted identifier and no class can be named that way.
-     * Switch expression must either produce value or throw exception.
+     * Switch expression must either produce value or throw an exception.
      * If you try to comment yield statement compiler will complain.
      */
     private static void printAssociatedClassWithAnimal(String x) {
@@ -166,10 +166,10 @@ public class SwitchExpressions {
     }
 
     /**
-     * Default case is not required in case of enum (if we cover all cases).
-     * If omitted it will be added by compiler.
-     * It is not even recommended to add default case, in order to throw exception to indicate unexpected value.
-     * Have a look at the compiled method.
+     The default case is not required in case of the enum (if we cover all cases).
+     If omitted it will be added by the compiler.
+     It is not even recommended to add default case, to throw an exception to indicate unexpected value.
+     Have a look at the compiled method.
      */
     private static void printNameAssociatedWithId(Numbers id) {
         String name = switch (id) {
